@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Listtask = () => {
+const Listtask = ({task, index, removeTask}) => {
   return (
     <>
       <div className='list-task'>
-         Task Name
-         <button className='delete-btn'> Delete </button>
+         {task.title}
+         <button onClick= {()=>{removeTask(index)}} className='delete-btn'> Delete </button>
       </div>
      
     </>
